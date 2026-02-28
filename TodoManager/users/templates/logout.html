@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Logout page{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="text-center mt-5 mb-6">
+    <h2 class="fw-bold">Thank You for using our application! <span class="text-primary">TodoManager</span></h2>
+      <a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login again</button></a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}
+
+ {% comment %} <form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>  {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>You have been logged out</h1>
+        <p><a href="{% url 'login' %}">Click here to log in again</a></p>
+    </div>
+</body>
+</html> {% endcomment %}

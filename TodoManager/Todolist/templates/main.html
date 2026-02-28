@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<div style="margin-top: 0px; padding-top: 10px;">
+    <img src="{% static 'img/5.ok.png' %}" alt="Home"  height="300" width="1272">
+</div>
+
+<div class="container text-center mt-3">
+    <p class="h1">Welcome to TeckSolution!</p>
+    <p class="h5">Stay organised. stay productive</p>
+    <p class="h6">Small steps everyday lead to big result</p>
+<div/>
+
+<div class="container text-center mt-3">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='{% url 'todolist'%}'">Go to Todo List</button>
+</div>
+{% endblock content %}.

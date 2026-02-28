@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container about-section mt-4">
+    <section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>About Me</h2>
+            <p class="lead">
+                I'm Tushar, a passionate developer based in Bangladesh. I specialize in building clean, modern websites and applications that deliver a great user experience.
+            </p>
+            <p>
+                With a background in web development and a love for clean design, I help businesses create digital experiences that stand out. Let’s build something great together!
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/My.png' %}" class="img-fluid rounded" alt="About Tushar">
+        </div>
+    </div>
+</section>
+
+</div>
+
+
+{% endblock  %}

@@ -1,0 +1,188 @@
+/* =====================
+   THEME VARIABLES
+===================== */
+:root {
+    --primary: #6366f1;
+    --secondary: #22c55e;
+    --dark: #020617;
+    --muted: #64748b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --navbar-color: #4db3aa; /* darker soft turquoise navbar */
+}
+
+/* =====================
+   GLOBAL RESET
+===================== */
+body {
+    background-color: var(--bg);
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--dark);
+    padding-top: 70px; /* prevent content from hiding under fixed navbar */
+}
+
+/* =====================
+   NAVBAR (DARKER SOFT TURQUOISE & FROZEN)
+===================== */
+.navbar {
+    background: var(--navbar-color) !important;
+    position: fixed;   /* frozen at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;      /* stays above all content */
+    padding: 1rem 2rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #ffffff !important; /* brand text in white */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* links in white */
+    font-weight: 500;
+    padding: 0.55rem 1rem;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255,255,255,0.2); /* subtle hover overlay */
+    color: var(--dark) !important;     /* dark text on hover */
+}
+
+.navbar-nav .nav-link.active {
+    background: #ffffff;              /* white background for active link */
+    color: var(--navbar-color) !important; /* match navbar color */
+}
+
+/* =====================
+   PAGE HEADER
+===================== */
+.page-header {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-title {
+    font-weight: 800;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.page-title::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    display: block;
+    margin-top: 6px;
+    border-radius: 999px;
+}
+
+/* =====================
+   CARDS / SECTIONS
+===================== */
+.card,
+.table {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: none;
+}
+
+/* =====================
+   FORMS
+===================== */
+input, textarea {
+    border-radius: 12px !important;
+    padding: 12px 14px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    box-shadow: 0 8px 20px rgba(99,102,241,0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* =====================
+   TABLE (TODO LIST)
+===================== */
+.table thead {
+    background: var(--card);
+    color: var(--dark);
+}
+
+.table tbody tr {
+    transition: background 0.3s;
+}
+
+.table tbody tr:hover {
+    background: #eef2ff;
+}
+
+/* for contact page alyment */
+.contact-container {
+    max-width: 600px;  /* or any width that fits */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: var(--dark); /* use your dark theme color */
+    color: #000000; /* white text for contrast */
+    padding: 2rem 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* subtle top shadow */
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* =====================
+   ANIMATION
+===================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.container,
+.card,
+.table {
+    animation: fadeUp 0.5s ease both;
+}
