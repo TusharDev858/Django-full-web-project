@@ -26,8 +26,17 @@ SECRET_KEY = 'django-insecure-+7hio2puatqam$j50c*emvx$wbye9m-)n9g*l)d3b%i$!ws1nr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "django-full-web-project-2.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-full-web-project-2.onrender.com",
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
